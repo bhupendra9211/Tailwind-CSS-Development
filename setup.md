@@ -48,16 +48,29 @@ Step 6: Create a file src/input.css and past this
 @tailwind components;
 @tailwind utilities;
 ```
-Step 7: Run the command 
+Step 7: Run the command and make sure this command will continue running to rebuilding your output.css 
 ```
 npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 ```
+or
+you can update package.json past this code into script 
+```
+"build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+```
+and instead of running ```npx tailwindcss -i ./src/input.css -o ./src/output.css --watch```
+these whole command you can run 
+```
+npm run build
+```
+this will rebuild your output.css file.
+
 Step 8: In index.html file add this code into head tag
 ```
 <link href="src/output.css" rel="stylesheet">
 ```
 
-Now you are ready to use tailwind css...
+Now you are ready to use tailwind css.\
+Thank you.
 
 
 
